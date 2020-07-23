@@ -1,0 +1,4 @@
+@Repository
+public interface UsersRepository extends JpaRepository< Users, Integer>{
+    public Page<Users> findByUserIDLike (Integer userID, Pageable  pageable);
+}
