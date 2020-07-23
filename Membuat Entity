@@ -1,0 +1,123 @@
+package com.northwind.jpa.entity;
+
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author WIN 10
+ */
+@Entity
+@Table(name = "users")
+public class Users implements Serializable {
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = Generation.Type.IDENTITY )
+    @Column(nama = "UserID")
+    private Integer UserID;
+    
+    @Column(nama = "Name")
+    max(40)
+    private String Name;
+    
+    @Column(nama = "Title")
+    private String Title;
+    
+    @Column(nama = "BirthDate")
+    private Datetime BirthDate;
+    
+    @Column(nama = "HireDate")
+    private Datetime HireDate;
+    
+    @Column(nama = "Position")
+    private String Position;
+    
+    @Column(nama = "Email")
+    private String Email;
+    
+    @Column(nama = "Password")
+    private String Password;
+    
+    public Users(){
+    }
+    
+    
+    public Users(Integer UserID, String Name, String Title, Datetime BirthDate, Datetime HireDate, String Position, String Email, String Password,) {
+        this.UserID = UserID;
+        this.Name = Name;
+        this.Title = Title;
+        this.BirthDate = BirthDate;
+        this.HireDate = HireDate;
+        this.Position = Position;
+        this.Email = Email;
+        this.Password = Password;
+        
+    }
+
+    public Integer getUserID() {
+        return UserID;
+    }
+
+    public void setUserID(Integer UserID) {
+        this.UserID = UserID;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public String getTitle() {
+        return Title;
+    }
+
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    public Datetime getBirthDate() {
+        return BirthDate;
+    }
+
+    public void setBirthDate(Datetime BirthDate) {
+        this.BirthDate = BirthDate;
+    }
+
+    public Datetime getHireDate() {
+        return HireDate;
+    }
+
+    public void setHireDate(Datetime HireDate) {
+        this.HireDate = HireDate;
+    }
+
+    public String getPosition() {
+        return Position;
+    }
+
+    public void setPosition(String Position) {
+        this.Position = Position;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
